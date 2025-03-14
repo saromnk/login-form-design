@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #8A2387, #8a28e0, #b91179);
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .login-signup button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            background: white;
+            transition: 0.3s;
+            border: 1px solid gray;
+            margin-bottom: 10px;
+        }
+        .login-signup .active {
+            background: linear-gradient(to right, #8A2387, #8a28e0, #b91179);
+            color: white;
+            margin-right: 2px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .forgot-password {
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+            color: #8A2387;
+            text-decoration: none;
+        }
+        .loginsubmit {
+            background: linear-gradient(to right, #8A2387, #8a28e0, #b91179);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        p a {
+            color: #8A2387;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            .login-signup {
+                flex-direction: column;
+            }
+            .login-signup a {
+              margin-bottom: 10px;
+              width: 100%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <div class="btn-group btn-group-justified login-signup" role="group">
+            <a href="#" class="btn btn-primary active">Login</a>
+            <a href="#" class="btn btn-default">Signup</a>
+        </div>
+        
+        <form>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <button type="submit" class="btn btn-block loginsubmit">Login</button>
+            <p>Not a member? <a href="#">Signup now</a></p>
+        </form>
+    </div>
+</body>
+</html>
